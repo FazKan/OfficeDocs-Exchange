@@ -108,13 +108,13 @@ Set-RemoteDomain -TargetDeliveryDomain: $true -Identity 'Hybrid Domain - M365B43
    
    a)	Sign-in to the computer with the Management Tools update as a Domain Admin and open Windows PowerShell.
    
-   b)	Load the Recipient Management snap-in by running Add-PSSnapin *RecipientManagement.
+   b)	Load the Recipient Management snap-in by running "Add-PSSnapin *RecipientManagement".
    
    c)	Run Add-PermissionForEMT.ps1 from the $env:ExchangeInstallPath\Scripts folder. The script creates a security group called Recipient Management EMT. Members of this group have recipient management permissions. All admins without domain admin rights need to perform recipient management should be added to this security group.
 
 7.	Sign in to the computer with the Management Tools update with the appropriate permissions (domain admin or member of Recipient Management EMT) and load the Recipient Management snap-in by running 
 ```powershell
-Add-PSSnapin *RecipientManagement. 
+Add-PSSnapin *RecipientManagement 
 ```
 This step must be performed every time you manage recipients.
 
